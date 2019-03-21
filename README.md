@@ -1,2 +1,2 @@
 # the-journey
-School/projects
+College projects and other stuff made in C/C++
