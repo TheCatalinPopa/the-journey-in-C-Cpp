@@ -1,0 +1,46 @@
+﻿/* 1. Un șir de valori numerice întregi (int) denumit n50 conține 50 de elemente.
+Construiți alte două șiruri de valori, d3 și d5, în care transferați numerele din
+șirul n50 care sunt divizibile prin 3 respectiv 5.  Afișați șirurile d3 și d5.
+*/
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <conio.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main(void)
+{
+	int n50[51], d3[50], d5[50], d = 0, x = 0, i;
+
+	for (i = 1; i <= 50; i++)
+		scanf("%d", &n50[i]);
+	for (i = 1; i <= 50; i++)
+	{
+		if (n50[i] % 3 == 0 && n50[i] % 5 == 0)
+		{
+			d3[d++] = n50[i];
+			d5[x++] = n50[i];
+		}
+
+		else
+			if (n50[i] % 3 == 0)
+				d3[d++] = n50[i];
+			else
+				if (n50[i] % 5 == 0)
+					d5[x++] = n50[i];
+	}
+	printf("\n\n\n\t\t\t******************************\n");
+	printf("\n\n\n\t\t\tNumerele divizibile cu 3 sunt:\n");
+	for (i = 0; i < d; i++)
+		printf("\t%d \n", d3[i]);
+
+	printf("\n\n\n\t\t\tNumerele divizibile cu 5 sunt: \n");
+	for (i = 0; i < x; i++)
+		printf("\t%d \n", d5[i]);
+
+	_getch();
+
+	return 0;
+}
+
